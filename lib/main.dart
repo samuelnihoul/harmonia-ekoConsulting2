@@ -11,11 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: true,
       title: 'Flutter Web',
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: Typography.whiteCupertino),
       home: HomePage(),
+      routes: {
+        '/home': (context) => HomePage(),
+        '/about': (context) => HomePage(),
+        '/contact': (context) => HomePage(),
+        '/ourClients': (context) => HomePage(),
+        '/ourServices': (context) => HomePage(),
+      },
     );
   }
 }
