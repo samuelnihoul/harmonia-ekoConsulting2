@@ -7,24 +7,25 @@ import 'package:flutter_web_example/widgets/navbar_desktop.dart';
 import 'package:flutter_web_example/widgets/drawer.dart';
 import 'package:flutter_web_example/widgets/mobile_navbar.dart';
 
-class HomePage extends StatefulWidget {
+class OurClient extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _OurClientState createState() => _OurClientState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _OurClientState extends State<OurClient> {
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      key: scaffoldKey,
-        appBar: ResponsiveWidget.isSmallScreen(context) ?
-        mobileTopBar(scaffoldKey) :
-         PreferredSize(preferredSize: Size(screenSize.width, 1000),
-        child: NavBar(),),
+        key: scaffoldKey,
+        appBar: ResponsiveWidget.isSmallScreen(context)
+            ? mobileTopBar(scaffoldKey)
+            : PreferredSize(
+                preferredSize: Size(screenSize.width, 1000),
+                child: NavBar(),
+              ),
         drawer: MobileMenu(),
         backgroundColor: bgColor,
         body: ResponsiveWidget(

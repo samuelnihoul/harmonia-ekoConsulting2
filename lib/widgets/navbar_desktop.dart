@@ -98,7 +98,7 @@ class _NavBarState extends State<NavBar> {
                             height: 12,
                           ),
                           Text(
-                            'Log In',
+                            'Pricing',
                             style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,

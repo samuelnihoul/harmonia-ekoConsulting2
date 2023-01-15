@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/pages/home/home.dart';
+import 'package:flutter_web_example/pages/about.dart/home.dart';
+import 'package:flutter_web_example/pages/contact/home.dart';
+import 'package:flutter_web_example/pages/nosClients/home.dart';
+import 'package:flutter_web_example/pages/ourOffer.dart/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +15,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      debugShowMaterialGrid: true,
       title: 'Flutter Web',
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
