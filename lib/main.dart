@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: {
         '/home': (context) => HomePage(),
-        '/about': (context) => HomePage(),
-        '/contact': (context) => HomePage(),
-        '/ourClients': (context) => HomePage(),
-        '/ourServices': (context) => HomePage(),
+        '/about': (context) => About(),
+        '/contact': (context) => Contact(),
+        '/ourClients': (context) => OurClient(),
+        '/ourServices': (context) => OurOffer(),
       },
     );
   }

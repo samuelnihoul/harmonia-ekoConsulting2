@@ -56,7 +56,91 @@ class _NavBarState extends State<NavBar> {
                             height: 12,
                           ),
                           Text(
-                            'Pricing',
+                            'Contact',
+                            style: GoogleFonts.roboto(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: _isHovering[0] ? active : disable,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Visibility(
+                            maintainAnimation: true,
+                            maintainState: true,
+                            maintainSize: true,
+                            visible: _isHovering[0],
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: active,
+                                  borderRadius: BorderRadius.circular(20)),
+                              height: 7,
+                              width: 7,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: screenSize.width / 20),
+                    InkWell(
+                      onHover: (value) {
+                        setState(() {
+                          value
+                              ? _isHovering[0] = true
+                              : _isHovering[0] = false;
+                        });
+                      },
+                      hoverColor: Colors.transparent,
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Text(
+                            'À propos',
+                            style: GoogleFonts.roboto(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: _isHovering[0] ? active : disable,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Visibility(
+                            maintainAnimation: true,
+                            maintainState: true,
+                            maintainSize: true,
+                            visible: _isHovering[0],
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: active,
+                                  borderRadius: BorderRadius.circular(20)),
+                              height: 7,
+                              width: 7,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: screenSize.width / 20),
+                    InkWell(
+                      onHover: (value) {
+                        setState(() {
+                          value
+                              ? _isHovering[0] = true
+                              : _isHovering[0] = false;
+                        });
+                      },
+                      hoverColor: Colors.transparent,
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Text(
+                            'Nos offres',
                             style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -98,7 +182,7 @@ class _NavBarState extends State<NavBar> {
                             height: 12,
                           ),
                           Text(
-                            'Pricing',
+                            'Nos clients',
                             style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -127,7 +211,7 @@ class _NavBarState extends State<NavBar> {
                 ),
               ),
               CustomButton(
-                text: "Register",
+                text: "Découvrir",
               ),
               SizedBox(width: screenSize.width / 40),
             ],
