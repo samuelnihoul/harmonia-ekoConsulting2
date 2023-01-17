@@ -48,7 +48,9 @@ class _NavBarState extends State<NavBar> {
                         });
                       },
                       hoverColor: Colors.transparent,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/contact');
+                      },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -90,7 +92,9 @@ class _NavBarState extends State<NavBar> {
                         });
                       },
                       hoverColor: Colors.transparent,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -132,7 +136,9 @@ class _NavBarState extends State<NavBar> {
                         });
                       },
                       hoverColor: Colors.transparent,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/ourServices');
+                      },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -140,7 +146,7 @@ class _NavBarState extends State<NavBar> {
                             height: 12,
                           ),
                           Text(
-                            'Nos offres',
+                            'Nos services',
                             style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -174,7 +180,9 @@ class _NavBarState extends State<NavBar> {
                         });
                       },
                       hoverColor: Colors.transparent,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/ourClients');
+                      },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -211,6 +219,9 @@ class _NavBarState extends State<NavBar> {
                 ),
               ),
               CustomButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/ourServices');
+                },
                 text: "Découvrir",
               ),
               SizedBox(width: screenSize.width / 40),

@@ -89,12 +89,12 @@ class DesktopScreen extends StatelessWidget {
                           child: TextField(
                             decoration: InputDecoration(
                                 icon: Icon(Icons.email_outlined),
-                                hintText: "Enter your email",
+                                hintText: "Entrez votre email",
                                 border: InputBorder.none),
                           ),
                         ),
                         CustomButton(
-                          text: "Get started",
+                          text: "Découvrir",
                         )
                       ],
                     ),
@@ -134,7 +134,7 @@ class DesktopScreen extends StatelessWidget {
                     height: screenSize.width / 28,
                   ),
                   Image.asset(
-                    "assets/images/img.png",
+                    "assets/images/peter-herrmann-96yBCCq6ug4-unsplash (1).jpg",
                     width: screenSize.width / 1.9,
                   ),
                 ],
