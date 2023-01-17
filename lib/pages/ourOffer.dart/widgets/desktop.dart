@@ -6,8 +6,8 @@ import 'package:flutter_web_example/widgets/bottom_text_widget.dart';
 import 'package:flutter_web_example/widgets/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DesktopScreen extends StatelessWidget {
-  const DesktopScreen({Key key}) : super(key: key);
+class DesktopServicesScreen extends StatelessWidget {
+  const DesktopServicesScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
