@@ -36,37 +36,39 @@ class _HomePageState extends State<HomePage> {
           return DesktopServicesScreen();
         case '/contact':
           return DesktopContactScreen();
+        default:
+          return DesktopScreen();
       }
-      ;
-      Widget bodyMobile() {
-        switch (ModalRoute.of(context).settings.name) {
-          case '/about':
-            return MobileAboutScreen();
-          case '/nosClients':
-            return MobileOurClientsScreen();
-          case '/ourOffer':
-            return MobileServicesScreen();
-          case '/contact':
-            return MobileContactScreen();
-        }
-        ;
-      }
-
-      ;
-      return Scaffold(
-          key: scaffoldKey,
-          appBar: ResponsiveWidget.isSmallScreen(context)
-              ? mobileTopBar(scaffoldKey)
-              : PreferredSize(
-                  preferredSize: Size(screenSize.width, 1000),
-                  child: NavBar(),
-                ),
-          drawer: MobileMenu(),
-          backgroundColor: bgColor,
-          body: ResponsiveWidget(
-            largeScreen: bodyDesktop(),
-            smallScreen: bodyMobile(),
-          ));
     }
+
+    Widget bodyMobile() {
+      switch (ModalRoute.of(context).settings.name) {
+        case '/about':
+          return MobileAboutScreen();
+        case '/nosClients':
+          return MobileOurClientsScreen();
+        case '/ourOffer':
+          return MobileServicesScreen();
+        case '/contact':
+          return MobileContactScreen();
+        default:
+          return MobileScreen();
+      }
+    }
+
+    return Scaffold(
+        key: scaffoldKey,
+        appBar: ResponsiveWidget.isSmallScreen(context)
+            ? mobileTopBar(scaffoldKey)
+            : PreferredSize(
+                preferredSize: Size(screenSize.width, 1000),
+                child: NavBar(),
+              ),
+        drawer: MobileMenu(),
+        backgroundColor: bgColor,
+        body: ResponsiveWidget(
+          largeScreen: bodyDesktop(),
+          smallScreen: bodyMobile(),
+        ));
   }
 }
