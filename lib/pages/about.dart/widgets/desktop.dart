@@ -18,7 +18,7 @@ class DesktopAboutScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(60),
         child: Card(
             shape: RoundedRectangleBorder(),
-            elevation: 50,
+            elevation: 400,
             color: Colors.white,
             shadowColor: active,
             child: Stack(children: [
