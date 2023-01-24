@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/helpers/style.dart';
 import '../../../constants/team.dart';
-import 'package:material_design_icons_flutter/icon_map.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class DesktopAboutScreen extends StatelessWidget {
@@ -9,36 +8,71 @@ class DesktopAboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _height = MediaQuery.of(context).size.height;
+    var _width = MediaQuery.of(context).size.width;
     return Center(
         child: FractionallySizedBox(
       widthFactor: 0.8,
       heightFactor: 0.8,
-      child: Card(
-          shape: RoundedRectangleBorder(),
-          elevation: 50,
-          color: Colors.white,
-          shadowColor: active,
-          child: Stack(children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Notre équipe ', style: h3),
-                Text('Découvrez notre équipe', style: h2Inverse),
-                Text(
-                    'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
-                    style: pInverse),
-                // placed dots on the background
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    TeamMember(Zakaria),
-                    TeamMember(Nouhaila),
-                    TeamMember(Samuel),
-                  ],
-                )
-              ],
-            ),
-          ])),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(60),
+        child: Card(
+            shape: RoundedRectangleBorder(),
+            elevation: 50,
+            color: Colors.white,
+            shadowColor: active,
+            child: Stack(children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Notre équipe ', style: h3),
+                  Text('Découvrez notre équipe', style: h2Inverse),
+                  Text(
+                      'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
+                      style: pInverse),
+                  SizedBox(
+                    height: _height * 0.1,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TeamMember(Zakaria),
+                      TeamMember(Nouhaila),
+                      TeamMember(Samuel),
+                    ],
+                  )
+                ],
+              ),
+              Positioned(
+                  top: _height * 0.05,
+                  left: _width * 0.6,
+                  child: GroupOf9Dots()),
+              Positioned(
+                top: _height * 0.69,
+                left: _width * 0.5,
+                child: Container(
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: _width * 0.1,
+                top: _height * 0.1,
+                child: Container(
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                    color: disable,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+            ])),
+      ),
     ));
   }
 }
