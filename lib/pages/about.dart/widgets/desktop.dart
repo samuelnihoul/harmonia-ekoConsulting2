@@ -14,55 +14,31 @@ class DesktopAboutScreen extends StatelessWidget {
       widthFactor: 0.8,
       heightFactor: 0.8,
       child: Card(
+          shape: RoundedRectangleBorder(),
           elevation: 50,
           color: Colors.white,
           shadowColor: active,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Notre équipe ', style: h3),
-              Text('Découvrez notre équipe', style: h2),
-              Text(
-                  'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
-                  style: p),
-              // placed dots on the background
-              Positioned(
-                top: 20,
-                child: SizedBox(
-                  height: 20,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                ),
-              ),
-
-              Positioned(
-                left: 50,
-                child: SizedBox(
-                  height: 20,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: disable,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(top: 10, left: 78, child: GroupOf9Dots()),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TeamMember(Zakaria),
-                  TeamMember(Nouhaila),
-                  TeamMember(Samuel),
-                ],
-              )
-            ],
-          )),
+          child: Stack(children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Notre équipe ', style: h3),
+                Text('Découvrez notre équipe', style: h2Inverse),
+                Text(
+                    'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
+                    style: pInverse),
+                // placed dots on the background
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TeamMember(Zakaria),
+                    TeamMember(Nouhaila),
+                    TeamMember(Samuel),
+                  ],
+                )
+              ],
+            ),
+          ])),
     ));
   }
 }
@@ -76,33 +52,56 @@ class TeamMember extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: disable,
-      elevation: 40,
-      shadowColor: Colors.black,
-      child: Column(
-        children: [
-          Image(
-            image: Image.asset('assets/images/${teamMember.photo}').image,
-            width: 50,
-          ),
-          Row(
+    var _width = MediaQuery.of(context).size.width;
+    var _height = MediaQuery.of(context).size.height;
+    return Container(
+      constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width * 0.2,
+          maxHeight: MediaQuery.of(context).size.width * 0.2),
+      child: Card(
+        color: disable,
+        elevation: 40,
+        shadowColor: Colors.black,
+        child: Padding(
+          padding: EdgeInsets.only(top: _height * 0.02),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                MdiIcons.facebook,
-                color: Colors.white,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image(
+                  image: Image.asset('assets/images/${teamMember.photo}').image,
+                  width: MediaQuery.of(context).size.width * 0.16,
+                  fit: BoxFit.scaleDown,
+                ),
               ),
-              Icon(
-                MdiIcons.twitter,
-                color: Colors.white,
-              ),
-              Icon(
-                MdiIcons.linkedin,
-                color: Colors.white,
-              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        MdiIcons.facebook,
+                        color: Colors.white,
+                      ),
+                      Icon(
+                        MdiIcons.twitter,
+                        color: Colors.white,
+                      ),
+                      Icon(
+                        MdiIcons.linkedin,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
-          )
-        ],
+          ),
+        ),
       ),
     );
   }
@@ -113,24 +112,31 @@ class GroupOf9Dots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          for (var _i in [0, 1, 2])
-            Row(
-              children: [
-                for (var _i in [0, 1, 2])
-                  SizedBox(
-                    height: 20,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: disable)),
+    return Transform.rotate(
+      angle: 29,
+      child: Container(
+        width: 30,
+        height: 30,
+        child: Column(
+          children: [
+            for (var _i in [0, 1, 2])
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  for (var _i in [0, 1, 2])
+                    SizedBox(
+                      height: 10,
+                      width: 10,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: disable)),
+                      ),
                     ),
-                  ),
-              ],
-            ),
-        ],
+                ],
+              ),
+          ],
+        ),
       ),
     );
   }

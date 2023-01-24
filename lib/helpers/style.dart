@@ -14,13 +14,14 @@ TextStyle h1 = TextStyle(
 TextStyle h2 = TextStyle(
     fontFamily: GoogleFonts.berkshireSwash().fontFamily,
     fontSize: 36.0,
-    color: disable);
+    color: textColor);
 TextStyle p = h2.copyWith(
   fontSize: 14.0,
 );
-TextStyle h3 = h2.copyWith(
-  fontSize: 24.0,
-);
+TextStyle h3 = h2.copyWith(fontSize: 24.0, color: disable);
 TextStyle pInverse = p.copyWith(
+  color: bgColor,
+);
+TextStyle h2Inverse = h2.copyWith(
   color: bgColor,
 );
