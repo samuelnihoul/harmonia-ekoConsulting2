@@ -20,43 +20,39 @@ class DesktopAboutScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Notre équipe ', style: h2),
-              Text('Découvrez notre équipe', style: h3),
+              Text('Notre équipe ', style: h3),
+              Text('Découvrez notre équipe', style: h2),
               Text(
                   'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
                   style: p),
               // placed dots on the background
-              SizedBox(
-                height: 20,
-                child: Container(
-                  color: Colors.black,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.black,
+              Positioned(
+                top: 20,
+                child: SizedBox(
+                  height: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      shape: BoxShape.circle,
+                    ),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-                child: Container(
-                  color: Colors.black,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.black,
+
+              Positioned(
+                left: 50,
+                child: SizedBox(
+                  height: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: disable,
+                      shape: BoxShape.circle,
+                    ),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-                child: Container(
-                  color: Colors.black,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              GroupOf9Dots(),
+              Positioned(top: 10, left: 78, child: GroupOf9Dots()),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -86,19 +82,22 @@ class TeamMember extends StatelessWidget {
       shadowColor: Colors.black,
       child: Column(
         children: [
-          Image(image: Image.asset('assets/images/${teamMember.photo}').image),
+          Image(
+            image: Image.asset('assets/images/${teamMember.photo}').image,
+            width: 50,
+          ),
           Row(
             children: [
               Icon(
-                Icons.facebook,
+                MdiIcons.facebook,
                 color: Colors.white,
               ),
               Icon(
-                Icons.facebook,
+                MdiIcons.twitter,
                 color: Colors.white,
               ),
               Icon(
-                Icons.facebook,
+                MdiIcons.linkedin,
                 color: Colors.white,
               ),
             ],
@@ -124,11 +123,9 @@ class GroupOf9Dots extends StatelessWidget {
                   SizedBox(
                     height: 20,
                     child: Container(
-                      color: Colors.black,
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.black,
-                      ),
+                          shape: BoxShape.circle,
+                          border: Border.all(color: disable)),
                     ),
                   ),
               ],
