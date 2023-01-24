@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Web',
       theme: ThemeData(
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: Typography.whiteCupertino),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: HomePage(),
       routes: {
         '/home': (context) => HomePage(),
