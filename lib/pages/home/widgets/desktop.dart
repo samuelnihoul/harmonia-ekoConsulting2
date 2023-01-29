@@ -134,7 +134,7 @@ class DesktopScreen extends StatelessWidget {
                     height: screenSize.width / 28,
                   ),
                   Image.asset(
-                    "assets/images/peter-herrmann-96yBCCq6ug4-unsplash (1).jpg",
+                    "images/mk-s-tJ5qnaL0xE8-unsplash (1).jpg",
                     width: screenSize.width / 1.9,
                   ),
                 ],
