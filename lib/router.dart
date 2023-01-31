@@ -6,14 +6,14 @@ import 'package:flutter_web_example/pages/home/widgets/mobile.dart';
 import 'package:flutter_web_example/widgets/navbar_desktop.dart';
 import 'package:flutter_web_example/widgets/drawer.dart';
 import 'package:flutter_web_example/widgets/mobile_navbar.dart';
-import '../about.dart/widgets/desktop.dart';
-import '../about.dart/widgets/mobile.dart';
-import '../nosClients/widgets/desktop.dart';
-import '../nosClients/widgets/mobile.dart';
-import '../ourOffer.dart/widgets/desktop.dart';
-import '../ourOffer.dart/widgets/mobile.dart';
-import '../contact/widgets/desktop.dart';
-import '../contact/widgets/mobile.dart';
+import 'pages/about.dart/widgets/desktop.dart';
+import 'pages/about.dart/widgets/mobile.dart';
+import 'pages/nosClients/widgets/desktop.dart';
+import 'pages/nosClients/widgets/mobile.dart';
+import 'pages/ourOffer.dart/widgets/desktop.dart';
+import 'pages/ourOffer.dart/widgets/mobile.dart';
+import 'pages/contact/widgets/desktop.dart';
+import 'pages/contact/widgets/mobile.dart';
 
 class HomePage extends StatefulWidget {
   @override

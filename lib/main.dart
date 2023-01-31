@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/pages/home/home.dart';
+import 'package:flutter_web_example/router.dart';
 
 void main() {
   runApp(MyApp());
