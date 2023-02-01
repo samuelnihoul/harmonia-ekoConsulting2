@@ -34,6 +34,10 @@ class _NavBarState extends State<NavBar> {
                 "assets/images/logo.png",
                 height: 50,
               ),
+              SizedBox(
+                width: screenSize.width / 30,
+              ),
+              Text('HE CONSULTING', style: navbarTitle),
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,

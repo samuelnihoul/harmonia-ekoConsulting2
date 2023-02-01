@@ -27,3 +27,9 @@ TextStyle pInverse = p.copyWith(
 TextStyle h2Inverse = h2.copyWith(
   color: bgColor,
 );
+TextStyle navbarTitle = TextStyle(
+  fontSize: 16.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
+  fontFamily: GoogleFonts.roboto().fontFamily,
+);

@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Web',
+      title: 'HE Consulting',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
