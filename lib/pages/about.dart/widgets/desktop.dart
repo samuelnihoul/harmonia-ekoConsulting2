@@ -25,21 +25,29 @@ class DesktopAboutScreen extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Notre équipe ', style: h3),
-                  Text('Découvrez notre équipe', style: h2Inverse),
-                  Text(
-                      'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
-                      style: pInverse),
-                  SizedBox(
-                    height: _height * 0.1,
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Notre équipe ', style: h3),
+                        Text('Découvrez notre équipe', style: h2Inverse),
+                        SizedBox(height: _height / 30),
+                        Text(
+                            'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
+                            style: pInverse),
+                      ],
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      TeamMember(Zakaria),
-                      TeamMember(Nouhaila),
-                      TeamMember(Samuel),
-                    ],
+                  Padding(
+                    padding: EdgeInsets.only(bottom: _height / 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        TeamMember(Zakaria),
+                        TeamMember(Nouhaila),
+                        TeamMember(Samuel),
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -54,7 +62,7 @@ class DesktopAboutScreen extends StatelessWidget {
                   height: 20,
                   width: 20,
                   decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: disable,
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -66,7 +74,7 @@ class DesktopAboutScreen extends StatelessWidget {
                   height: 20,
                   width: 20,
                   decoration: BoxDecoration(
-                    color: disable,
+                    color: active,
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -89,51 +97,51 @@ class TeamMember extends StatelessWidget {
     var _width = MediaQuery.of(context).size.width;
     var _height = MediaQuery.of(context).size.height;
     return Container(
-      constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width * 0.2,
-          maxHeight: MediaQuery.of(context).size.width * 0.2),
-      child: Card(
-        color: disable,
-        elevation: 40,
-        shadowColor: Colors.black,
-        child: Padding(
-          padding: EdgeInsets.only(top: _height * 0.02),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image(
-                  image: Image.asset('assets/images/${teamMember.photo}').image,
-                  width: MediaQuery.of(context).size.width * 0.16,
-                  fit: BoxFit.scaleDown,
-                ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        MdiIcons.facebook,
-                        color: Colors.white,
-                      ),
-                      Icon(
-                        MdiIcons.twitter,
-                        color: Colors.white,
-                      ),
-                      Icon(
-                        MdiIcons.linkedin,
-                        color: Colors.white,
-                      ),
-                    ],
+      constraints:
+          BoxConstraints(maxWidth: _width * 0.2, maxHeight: _width * 0.2),
+      child: AspectRatio(
+        aspectRatio: 9 / 10,
+        child: Card(
+          color: Color(0xfff9c22e),
+          elevation: 40,
+          shadowColor: Colors.black,
+          child: Padding(
+            padding: EdgeInsets.only(top: _height * 0.02),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image(
+                    image:
+                        Image.asset('assets/images/${teamMember.photo}').image,
+                    width: MediaQuery.of(context).size.width * 0.16,
+                    fit: BoxFit.scaleDown,
                   ),
                 ),
-              )
-            ],
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 5),
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: _height * 0.01,
+                      children: [
+                        Icon(MdiIcons.facebook, color: Colors.white),
+                        Icon(
+                          MdiIcons.twitter,
+                          color: Colors.white,
+                        ),
+                        Icon(
+                          MdiIcons.linkedin,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
