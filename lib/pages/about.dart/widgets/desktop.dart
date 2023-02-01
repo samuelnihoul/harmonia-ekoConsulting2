@@ -109,7 +109,7 @@ class TeamMember extends StatelessWidget {
             padding: EdgeInsets.only(top: _height * 0.02),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
@@ -117,29 +117,24 @@ class TeamMember extends StatelessWidget {
                     image:
                         Image.asset('assets/images/${teamMember.photo}').image,
                     width: MediaQuery.of(context).size.width * 0.16,
-                    fit: BoxFit.scaleDown,
+                    fit: BoxFit.fill,
                   ),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 5),
-                    child: Wrap(
-                      alignment: WrapAlignment.center,
-                      spacing: _height * 0.01,
-                      children: [
-                        Icon(MdiIcons.facebook, color: Colors.white),
-                        Icon(
-                          MdiIcons.twitter,
-                          color: Colors.white,
-                        ),
-                        Icon(
-                          MdiIcons.linkedin,
-                          color: Colors.white,
-                        ),
-                      ],
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  spacing: _height * 0.01,
+                  children: [
+                    Icon(MdiIcons.facebook, color: Colors.white),
+                    Icon(
+                      MdiIcons.twitter,
+                      color: Colors.white,
                     ),
-                  ),
-                )
+                    Icon(
+                      MdiIcons.linkedin,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
