@@ -16,10 +16,10 @@ class _NavBarState extends State<NavBar> {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
+    var _width = MediaQuery.of(context).size.width;
 
     return PreferredSize(
-      preferredSize: Size(screenSize.width, 1000),
+      preferredSize: Size(_width, 1000),
       child: Container(
         color: Colors.transparent,
         child: Padding(
@@ -35,14 +35,14 @@ class _NavBarState extends State<NavBar> {
                 height: 50,
               ),
               SizedBox(
-                width: screenSize.width / 30,
+                width: _width / 100,
               ),
               Text('HE CONSULTING', style: navbarTitle),
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    SizedBox(width: screenSize.width / 8),
+                    SizedBox(width: _width / 8),
                     InkWell(
                       onHover: (value) {
                         setState(() {
@@ -86,7 +86,7 @@ class _NavBarState extends State<NavBar> {
                         ],
                       ),
                     ),
-                    SizedBox(width: screenSize.width / 20),
+                    SizedBox(width: _width / 20),
                     InkWell(
                       onHover: (value) {
                         setState(() {
@@ -130,7 +130,7 @@ class _NavBarState extends State<NavBar> {
                         ],
                       ),
                     ),
-                    SizedBox(width: screenSize.width / 20),
+                    SizedBox(width: _width / 20),
                     InkWell(
                       onHover: (value) {
                         setState(() {
@@ -174,7 +174,7 @@ class _NavBarState extends State<NavBar> {
                         ],
                       ),
                     ),
-                    SizedBox(width: screenSize.width / 20),
+                    SizedBox(width: _width / 20),
                     InkWell(
                       onHover: (value) {
                         setState(() {
@@ -218,7 +218,7 @@ class _NavBarState extends State<NavBar> {
                         ],
                       ),
                     ),
-                    SizedBox(width: screenSize.width / 20),
+                    SizedBox(width: _width / 20),
                   ],
                 ),
               ),
@@ -228,7 +228,7 @@ class _NavBarState extends State<NavBar> {
                 },
                 text: "Découvrir",
               ),
-              SizedBox(width: screenSize.width / 40),
+              SizedBox(width: _width / 40),
             ],
           ),
         ),
