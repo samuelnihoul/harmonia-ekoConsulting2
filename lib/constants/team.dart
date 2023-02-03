@@ -6,12 +6,12 @@ class ITeamMember {
   final String linkedin;
   final String photo;
   ITeamMember({
-    this.name,
-    this.photo,
-    this.description,
-    this.instagram,
-    this.twitter,
-    this.linkedin,
+    required this.name,
+    required this.photo,
+    required this.description,
+    required this.instagram,
+    required this.twitter,
+    required this.linkedin,
   });
 }
 

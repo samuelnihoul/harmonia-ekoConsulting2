@@ -7,8 +7,7 @@ import 'package:flutter_web_example/widgets/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DesktopContactScreen extends StatelessWidget {
-  const DesktopContactScreen({Key key}) : super(key: key);
-
+  const DesktopContactScreen({super.key});
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/helpers/style.dart';
 
-class MobileMenu extends StatelessWidget {
-  const MobileMenu({ Key key }) : super(key: key);
+import '../constants/navbarItem.dart';
 
- @override
+class MobileMenu extends StatelessWidget {
+  const MobileMenu({Key key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
@@ -15,31 +17,12 @@ class MobileMenu extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-
-              InkWell(
-                onTap: () {},
-                child: Text(
-                  'Pricing',
-                  style: TextStyle(color: Colors.white, fontSize: 22),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
-                child: Divider(
-                ),
-              ),
-              InkWell(
-                onTap: () {},
-                child: Text(
-                  'Login',
-                  style: TextStyle(color: Colors.white, fontSize: 22),
-                ),
-              ),
+              for (final item in ENavbar.values) NavbarItem(item),
               Expanded(
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    'Copyright © 2020 | Santos Enoque',
+                    'Copyright © ${DateTime.now().year} | harmonia-eko',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -53,4 +36,20 @@ class MobileMenu extends StatelessWidget {
       ),
     );
   }
+}
+
+class NavbarItem extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: Text(item.name),
+      onTap: () {
+        Navigator.pushNamed(context, item.route);
+      },
+    );
+  }
+
+  final INavbarItem item;
+
+  NavbarItem(this.item, {super.key});
 }

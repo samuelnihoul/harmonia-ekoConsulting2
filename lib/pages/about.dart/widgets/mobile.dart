@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/helpers/style.dart';
-import '../../../constants/team.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../../../constants/team.dart';
+
 class MobileAboutScreen extends StatelessWidget {
-  const MobileAboutScreen({Key key}) : super(key: key);
+  const MobileAboutScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -86,8 +87,8 @@ class TeamMember extends StatelessWidget {
   final ITeamMember teamMember;
   const TeamMember(
     this.teamMember, {
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +148,7 @@ class TeamMember extends StatelessWidget {
 }
 
 class GroupOf9Dots extends StatelessWidget {
-  const GroupOf9Dots({Key key}) : super(key: key);
+  const GroupOf9Dots({super.key});
 
   @override
   Widget build(BuildContext context) {
