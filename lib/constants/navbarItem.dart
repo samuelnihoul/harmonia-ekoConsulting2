@@ -10,4 +10,4 @@ INavbarItem ourServices =
 INavbarItem contact = INavbarItem(name: 'Contact', route: 'contact');
 INavbarItem ourClients = INavbarItem(name: 'Nos Clients', route: 'ourClients');
 
-enum ENavbar<INavbarItem> { about, ourServices, contact, ourClients }
+final itemList = [about, ourServices, ourClients, contact];

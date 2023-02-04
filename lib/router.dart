@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         key: scaffoldKey,
         appBar: ResponsiveWidget.isSmallScreen(context)
-            ? mobileTopBar(scaffoldKey)
+            ? mobileTopBar(scaffoldKey) as PreferredSizeWidget
             : PreferredSize(
                 preferredSize: Size(screenSize.width, 1000),
                 child: NavBar(),
