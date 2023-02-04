@@ -95,6 +95,7 @@ class DesktopOurClientsScreen extends StatelessWidget {
                         ),
                         CustomButton(
                           text: "Get started",
+                          onPressed: () {},
                         )
                       ],
                     ),

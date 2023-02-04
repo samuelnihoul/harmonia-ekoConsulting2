@@ -88,6 +88,7 @@ class MobileContactScreen extends StatelessWidget {
                 ),
               ),
               CustomButton(
+                onPressed: () {},
                 text: "Get started",
               )
             ],

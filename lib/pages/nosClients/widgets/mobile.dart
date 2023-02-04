@@ -89,6 +89,7 @@ class MobileOurClientsScreen extends StatelessWidget {
               ),
               CustomButton(
                 text: "Get started",
+                onPressed: () {},
               )
             ],
           ),

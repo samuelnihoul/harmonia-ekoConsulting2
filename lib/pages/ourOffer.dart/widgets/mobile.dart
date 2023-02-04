@@ -89,6 +89,7 @@ class MobileServicesScreen extends StatelessWidget {
               ),
               CustomButton(
                 text: "Get started",
+                onPressed: () {},
               )
             ],
           ),

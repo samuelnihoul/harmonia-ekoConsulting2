@@ -5,7 +5,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../../../constants/team.dart';
 
 class DesktopAboutScreen extends StatelessWidget {
-  const DesktopAboutScreen({required Key key}) : super(key: key);
+  const DesktopAboutScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +44,9 @@ class DesktopAboutScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        TeamMember(Zakaria),
-                        TeamMember(Nouhaila),
-                        TeamMember(Samuel),
+                        TeamMember(zakaria),
+                        TeamMember(nouhaila),
+                        TeamMember(samuel),
                       ],
                     ),
                   )
@@ -157,11 +157,11 @@ class GroupOf9Dots extends StatelessWidget {
         height: 30,
         child: Column(
           children: [
-            for (var _i in [0, 1, 2])
+            for (var _ in [0, 1, 2])
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  for (var _i in [0, 1, 2])
+                  for (var _ in [0, 1, 2])
                     SizedBox(
                       height: 10,
                       width: 10,

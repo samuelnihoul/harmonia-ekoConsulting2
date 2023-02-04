@@ -6,8 +6,8 @@ class BottomText extends StatelessWidget {
   final String mainText;
   final String secondaryText;
 
-  const BottomText({Key key, this.mainText, this.secondaryText})
-      : super(key: key);
+  const BottomText(
+      {super.key, required this.mainText, required this.secondaryText});
   @override
   Widget build(BuildContext context) {
     return RichText(

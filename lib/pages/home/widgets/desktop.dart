@@ -95,6 +95,9 @@ class DesktopScreen extends StatelessWidget {
                             ),
                           ),
                           CustomButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'ourServices');
+                            },
                             text: "Découvrir",
                           )
                         ],

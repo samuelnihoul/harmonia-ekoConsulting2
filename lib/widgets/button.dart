@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final Function onPressed;
-  const CustomButton({Key key, this.onPressed, this.text}) : super(key: key);
+  const CustomButton({super.key, required this.onPressed, required this.text});
   @override
   Widget build(BuildContext context) {
     return InkWell(

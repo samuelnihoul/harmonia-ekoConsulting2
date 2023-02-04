@@ -93,6 +93,7 @@ class DesktopContactScreen extends StatelessWidget {
                           ),
                         ),
                         CustomButton(
+                          onPressed: () {},
                           text: "Get started",
                         )
                       ],

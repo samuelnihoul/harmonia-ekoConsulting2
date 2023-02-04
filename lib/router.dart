@@ -3,17 +3,18 @@ import 'package:flutter_web_example/helpers/responsive.dart';
 import 'package:flutter_web_example/helpers/style.dart';
 import 'package:flutter_web_example/pages/home/widgets/desktop.dart';
 import 'package:flutter_web_example/pages/home/widgets/mobile.dart';
-import 'package:flutter_web_example/widgets/navbar_desktop.dart';
 import 'package:flutter_web_example/widgets/drawer.dart';
 import 'package:flutter_web_example/widgets/mobile_navbar.dart';
+import 'package:flutter_web_example/widgets/navbar_desktop.dart';
+
 import 'pages/about.dart/widgets/desktop.dart';
 import 'pages/about.dart/widgets/mobile.dart';
+import 'pages/contact/widgets/desktop.dart';
+import 'pages/contact/widgets/mobile.dart';
 import 'pages/nosClients/widgets/desktop.dart';
 import 'pages/nosClients/widgets/mobile.dart';
 import 'pages/ourOffer.dart/widgets/desktop.dart';
 import 'pages/ourOffer.dart/widgets/mobile.dart';
-import 'pages/contact/widgets/desktop.dart';
-import 'pages/contact/widgets/mobile.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     Widget bodyDesktop() {
-      switch (ModalRoute.of(context).settings.name) {
+      switch (ModalRoute.of(context)?.settings.name) {
         case '/about':
           return DesktopAboutScreen();
         case '/nosClients':
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
     }
 
     Widget bodyMobile() {
-      switch (ModalRoute.of(context).settings.name) {
+      switch (ModalRoute.of(context)?.settings.name) {
         case '/about':
           return MobileAboutScreen();
         case '/nosClients':
@@ -69,6 +70,7 @@ class _HomePageState extends State<HomePage> {
         body: ResponsiveWidget(
           largeScreen: bodyDesktop(),
           smallScreen: bodyMobile(),
+          mediumScreen: bodyDesktop(),
         ));
   }
 }

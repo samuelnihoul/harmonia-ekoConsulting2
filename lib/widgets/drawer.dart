@@ -4,7 +4,7 @@ import 'package:flutter_web_example/helpers/style.dart';
 import '../constants/navbarItem.dart';
 
 class MobileMenu extends StatelessWidget {
-  const MobileMenu({Key key}) : super(key: key);
+  const MobileMenu({super.key});
 
   @override
   Widget build(BuildContext context) {

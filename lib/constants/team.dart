@@ -15,7 +15,7 @@ class ITeamMember {
   });
 }
 
-ITeamMember Zakaria = ITeamMember(
+ITeamMember zakaria = ITeamMember(
   name: 'Zakaria',
   photo: '1667897326743.jpeg',
   description:
@@ -24,7 +24,7 @@ ITeamMember Zakaria = ITeamMember(
   twitter: 'https://twitter.com/zakaria_ouahid',
   linkedin: 'https://www.linkedin.com/in/zakaria-ouahid-5b1b3b1b3/',
 );
-ITeamMember Nouhaila = ITeamMember(
+ITeamMember nouhaila = ITeamMember(
   name: 'Nouhaila',
   photo:
       'professeur-home-etudiante-neoma-propose-cours-management-preparer-concours-acces-grandes-ecoles.jpg',
@@ -34,7 +34,7 @@ ITeamMember Nouhaila = ITeamMember(
   twitter: 'https://twitter.com/nouhaila_ouahid',
   linkedin: 'https://www.linkedin.com/in/nouhaila-ouahid-5b1b3b1b3/',
 );
-ITeamMember Samuel = ITeamMember(
+ITeamMember samuel = ITeamMember(
   name: 'Samuel',
   photo: 'mirr.jpg',
   description:

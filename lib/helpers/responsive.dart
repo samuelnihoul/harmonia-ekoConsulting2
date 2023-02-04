@@ -4,13 +4,12 @@ class ResponsiveWidget extends StatelessWidget {
   final Widget largeScreen;
   final Widget mediumScreen;
   final Widget smallScreen;
-
   const ResponsiveWidget({
-    required Key key,
+    super.key,
     required this.largeScreen,
     required this.mediumScreen,
     required this.smallScreen,
-  }) : super(key: key);
+  });
 
   static bool isSmallScreen(BuildContext context) {
     return MediaQuery.of(context).size.width < 852;
@@ -33,9 +32,9 @@ class ResponsiveWidget extends StatelessWidget {
           return largeScreen;
         } else if (constraints.maxWidth <= 1200 &&
             constraints.maxWidth >= 852) {
-          return mediumScreen ?? largeScreen;
+          return mediumScreen;
         } else {
-          return smallScreen ?? largeScreen;
+          return smallScreen;
         }
       },
     );

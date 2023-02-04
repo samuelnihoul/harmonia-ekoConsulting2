@@ -95,6 +95,7 @@ class DesktopServicesScreen extends StatelessWidget {
                         ),
                         CustomButton(
                           text: "Get started",
+                          onPressed: () {},
                         )
                       ],
                     ),

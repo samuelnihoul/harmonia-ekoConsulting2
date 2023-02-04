@@ -41,9 +41,9 @@ class MobileAboutScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        TeamMember(Zakaria),
-                        TeamMember(Nouhaila),
-                        TeamMember(Samuel),
+                        TeamMember(zakaria),
+                        TeamMember(nouhaila),
+                        TeamMember(samuel),
                       ],
                     )
                   ],
@@ -92,7 +92,6 @@ class TeamMember extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _width = MediaQuery.of(context).size.width;
     var _height = MediaQuery.of(context).size.height;
     return Container(
       constraints: BoxConstraints(
@@ -159,11 +158,11 @@ class GroupOf9Dots extends StatelessWidget {
         height: 30,
         child: Column(
           children: [
-            for (var _i in [0, 1, 2])
+            for (var _ in [0, 1, 2])
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  for (var _i in [0, 1, 2])
+                  for (var _ in [0, 1, 2])
                     SizedBox(
                       height: 10,
                       width: 10,
