@@ -14,19 +14,17 @@ class MobileMenu extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               for (final item in itemList) NavbarItem(item),
-              Expanded(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Text(
-                    'Copyright © ${DateTime.now().year} | harmonia-eko',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  'Copyright © ${DateTime.now().year} | harmonia-eko',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
                   ),
                 ),
               )
@@ -41,9 +39,9 @@ class MobileMenu extends StatelessWidget {
 class NavbarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return OutlinedButton(
       child: Text(item.name),
-      onTap: () {
+      onPressed: () {
         Navigator.pushNamed(context, item.route);
       },
     );
