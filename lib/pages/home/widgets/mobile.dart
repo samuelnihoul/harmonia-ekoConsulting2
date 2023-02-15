@@ -24,20 +24,16 @@ class MobileScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 text: TextSpan(
                     children: [
-                      TextSpan(
-                        text: "Get noticed for ",
-                      ),
-                      TextSpan(
-                          text: "who",
-                          style: GoogleFonts.roboto(color: active)),
+                      TextSpan(text: "Get noticed for ", style: defaultStyle),
+                      TextSpan(text: "who", style: activeDefaultStyle),
                       TextSpan(
                         text: " you are, ",
+                        style: defaultStyle,
                       ),
-                      TextSpan(
-                          text: "not what",
-                          style: GoogleFonts.roboto(color: active)),
+                      TextSpan(text: "not what", style: activeDefaultStyle),
                       TextSpan(
                         text: " you look like.",
+                        style: defaultStyle,
                       ),
                     ],
                     style: GoogleFonts.roboto(
@@ -49,13 +45,12 @@ class MobileScreen extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        Container(
-          width: 550,
-          constraints: BoxConstraints(maxWidth: 550),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Text(
             mainParagraph,
             textAlign: TextAlign.center,
-            style: GoogleFonts.roboto(letterSpacing: 1.5, height: 1.5),
+            style: defaultStyle.copyWith(letterSpacing: 1.5, height: 1.5),
           ),
         ),
         SizedBox(

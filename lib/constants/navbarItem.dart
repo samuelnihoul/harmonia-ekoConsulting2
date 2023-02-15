@@ -9,5 +9,5 @@ INavbarItem ourServices =
     INavbarItem(name: 'Nos Services', route: '/ourServices');
 INavbarItem contact = INavbarItem(name: 'Contact', route: '/contact');
 INavbarItem ourClients = INavbarItem(name: 'Nos Clients', route: '/ourClients');
-
-final itemList = [ourServices, ourClients, about, contact];
+INavbarItem home = INavbarItem(name: 'Accueil', route: '/');
+final itemList = [home, ourServices, ourClients, about, contact];

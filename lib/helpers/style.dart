@@ -33,3 +33,16 @@ TextStyle navbarTitle = TextStyle(
   color: Colors.white,
   fontFamily: GoogleFonts.roboto().fontFamily,
 );
+TextStyle navbarItem = TextStyle(
+  fontSize: 14.0,
+  color: Colors.white,
+  fontFamily: GoogleFonts.roboto().fontFamily,
+);
+TextStyle defaultStyle = TextStyle(
+  fontFamily: GoogleFonts.roboto().fontFamily,
+  color: textColor,
+);
+TextStyle activeDefaultStyle = TextStyle(
+  fontFamily: GoogleFonts.roboto().fontFamily,
+  color: active,
+);
