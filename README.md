@@ -1,7 +1,9 @@
 #Harmonia-ekoConsulting2
+
 harmonia-ekoConsulting2 is a Flutter Web app to showcase HE Consulting services. In this README, we'll explain how to run the app's development server on your machine, even if you don't have any technical experience.
 
 ##Prerequisites
+
 Before you can run the app's development server, you'll need to make sure your machine meets the following requirements:
 
 You have Flutter installed on your machine. If you haven't installed Flutter yet, please follow the Flutter installation instructions for your operating system.
