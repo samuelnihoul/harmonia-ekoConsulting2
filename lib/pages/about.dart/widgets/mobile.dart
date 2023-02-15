@@ -14,8 +14,7 @@ class MobileAboutScreen extends StatelessWidget {
     return SingleChildScrollView(
         child: Center(
       child: Container(
-        height: _height * 0.9,
-        width: _width * 0.9,
+        width: _width * 0.8,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
           child: Card(
@@ -38,7 +37,7 @@ class MobileAboutScreen extends StatelessWidget {
                     SizedBox(
                       height: _height * 0.1,
                     ),
-                    Row(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         TeamMember(zakaria),
@@ -49,11 +48,11 @@ class MobileAboutScreen extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                    top: _height * 0.05,
+                    top: _height * 0.25,
                     left: _width * 0.6,
                     child: GroupOf9Dots()),
                 Positioned(
-                  top: _height * 0.69,
+                  top: _height * 0.29,
                   left: _width * 0.5,
                   child: Container(
                     height: 20,
@@ -95,8 +94,8 @@ class TeamMember extends StatelessWidget {
     var _height = MediaQuery.of(context).size.height;
     return Container(
       constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width * 0.2,
-          maxHeight: MediaQuery.of(context).size.width * 0.2),
+          maxWidth: MediaQuery.of(context).size.width * 0.7,
+          maxHeight: MediaQuery.of(context).size.width * 0.7),
       child: Card(
         color: disable,
         elevation: 40,
@@ -111,7 +110,7 @@ class TeamMember extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 child: Image(
                   image: Image.asset('assets/images/${teamMember.photo}').image,
-                  width: MediaQuery.of(context).size.width * 0.16,
+                  width: MediaQuery.of(context).size.width * 0.5,
                   fit: BoxFit.scaleDown,
                 ),
               ),
