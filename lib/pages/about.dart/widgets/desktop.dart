@@ -16,7 +16,7 @@ class DesktopAboutScreen extends StatelessWidget {
       widthFactor: 0.8,
       heightFactor: 0.8,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(60),
+        borderRadius: BorderRadius.circular(40),
         child: Card(
             shape: RoundedRectangleBorder(),
             elevation: 400,

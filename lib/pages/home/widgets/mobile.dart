@@ -13,7 +13,7 @@ class MobileScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Row(
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(

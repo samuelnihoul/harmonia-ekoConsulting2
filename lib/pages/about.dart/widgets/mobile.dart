@@ -12,12 +12,12 @@ class MobileAboutScreen extends StatelessWidget {
     var _height = MediaQuery.of(context).size.height;
     var _width = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
-      child: Center(
-          child: FractionallySizedBox(
-        widthFactor: 0.8,
-        heightFactor: 0.8,
+        child: Center(
+      child: Container(
+        height: _height * 0.9,
+        width: _width * 0.9,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(60),
+          borderRadius: BorderRadius.circular(30),
           child: Card(
               shape: RoundedRectangleBorder(),
               elevation: 400,
@@ -78,8 +78,8 @@ class MobileAboutScreen extends StatelessWidget {
                 ),
               ])),
         ),
-      )),
-    );
+      ),
+    ));
   }
 }
 

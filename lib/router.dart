@@ -46,9 +46,9 @@ class _HomePageState extends State<HomePage> {
       switch (ModalRoute.of(context)?.settings.name) {
         case '/about':
           return MobileAboutScreen();
-        case '/nosClients':
+        case '/ourClients':
           return MobileOurClientsScreen();
-        case '/ourOffer':
+        case '/ourServices':
           return MobileServicesScreen();
         case '/contact':
           return MobileContactScreen();
