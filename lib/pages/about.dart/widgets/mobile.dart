@@ -26,14 +26,23 @@ class MobileAboutScreen extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Notre équipe ',
-                        style: h3, textAlign: TextAlign.center),
-                    Text('Découvrez notre équipe',
-                        style: h2Inverse, textAlign: TextAlign.center),
-                    Text(
-                        'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
-                        style: pInverse,
-                        textAlign: TextAlign.center),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Notre équipe ',
+                          style: h3, textAlign: TextAlign.center),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Découvrez notre équipe',
+                          style: h2Inverse, textAlign: TextAlign.center),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                          'Notre équipe experte est composée de créatifs avec un savoir-faire technique, stratèges qui pensent hors du cadre et développeurs qui promeuvent l\'innovation.',
+                          style: pInverse,
+                          textAlign: TextAlign.center),
+                    ),
                     SizedBox(
                       height: _height * 0.1,
                     ),
@@ -48,11 +57,11 @@ class MobileAboutScreen extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                    top: _height * 0.25,
+                    top: _height * 0.35,
                     left: _width * 0.6,
                     child: GroupOf9Dots()),
                 Positioned(
-                  top: _height * 0.29,
+                  top: _height * 0.39,
                   left: _width * 0.5,
                   child: Container(
                     height: 20,
@@ -64,13 +73,13 @@ class MobileAboutScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: _width * 0.1,
-                  top: _height * 0.1,
+                  left: _width * 0.11,
+                  top: _height * 0.19,
                   child: Container(
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
-                      color: disable,
+                      color: active,
                       shape: BoxShape.circle,
                     ),
                   ),
