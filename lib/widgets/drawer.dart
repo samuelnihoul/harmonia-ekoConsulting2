@@ -40,7 +40,7 @@ class NavbarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-      child: Text(item.name),
+      child: Text(item.name, style: defaultStyle),
       onPressed: () {
         Navigator.pushNamed(context, item.route);
       },
