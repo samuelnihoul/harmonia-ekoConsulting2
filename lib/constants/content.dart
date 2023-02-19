@@ -1,6 +1,6 @@
-const mainParagraph =
-    "You’re more than just a photo. You have stories to tell, and passions to share, and things to talk about that are more interesting than the weather. Because you deserve what dating deserves: better.";
-
+const mainParagraph ="We are here to help you reap the benefits of aligning your businisses with emerging ecological incentives"
+const tagline=
+    "HE Consulting: realigning money and ecology";
 class Testimonial {
   String client;
   String testimonial;
