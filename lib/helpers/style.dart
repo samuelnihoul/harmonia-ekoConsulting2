@@ -1,24 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 Color active = Color(0xFFf9c22e);
 Color disable = Color(0xFFdb1a4d);
 Color bgColor = Color(0xFF1a1a1a);
 Color textColor = Color(0xFFffffff);
-
+Color lightActive = Color(0xfffbd46d);
 TextStyle h1 = TextStyle(
-    fontSize: 72.0,
-    fontWeight: FontWeight.bold,
-    color: active,
-    fontFamily: GoogleFonts.roboto().fontFamily);
-TextStyle h2 = TextStyle(
-    fontFamily: GoogleFonts.roboto().fontFamily,
-    fontWeight: FontWeight.bold,
-    fontSize: 36.0,
-    color: textColor);
+  fontSize: 72.0,
+  fontWeight: FontWeight.bold,
+  color: active,
+);
+TextStyle h2 =
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 36.0, color: textColor);
 TextStyle p = TextStyle(
   fontSize: 14.0,
-  fontFamily: GoogleFonts.roboto().fontFamily,
 );
 TextStyle h3 = h2.copyWith(fontSize: 24.0, color: disable);
 TextStyle pInverse = p.copyWith(
@@ -31,18 +26,14 @@ TextStyle navbarTitle = TextStyle(
   fontSize: 16.0,
   fontWeight: FontWeight.bold,
   color: Colors.white,
-  fontFamily: GoogleFonts.roboto().fontFamily,
 );
 TextStyle navbarItem = TextStyle(
   fontSize: 14.0,
   color: Colors.white,
-  fontFamily: GoogleFonts.roboto().fontFamily,
 );
 TextStyle defaultStyle = TextStyle(
-  fontFamily: GoogleFonts.roboto().fontFamily,
   color: textColor,
 );
 TextStyle activeDefaultStyle = TextStyle(
-  fontFamily: GoogleFonts.roboto().fontFamily,
   color: active,
 );

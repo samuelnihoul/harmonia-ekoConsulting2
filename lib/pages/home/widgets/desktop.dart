@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/constants/content.dart';
-import 'package:flutter_web_example/helpers/responsive.dart';
 import 'package:flutter_web_example/helpers/style.dart';
 import 'package:flutter_web_example/widgets/bottom_text_widget.dart';
 import 'package:flutter_web_example/widgets/button.dart';
@@ -27,46 +26,10 @@ class DesktopScreen extends StatelessWidget {
                     Container(
                       alignment: Alignment.centerLeft,
                       margin: EdgeInsets.only(bottom: 15),
-                      child: Text(
-                        "Because you deserve better",
-                        style: GoogleFonts.roboto(
-                            color: active,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      child: Text(heroText, style: h3),
                     ),
-                    RichText(
-                        text: TextSpan(
-                            children: [
-                          TextSpan(
-                              text: "Get noticed for ",
-                              style: GoogleFonts.roboto(color: textColor)),
-                          TextSpan(
-                              text: "who",
-                              style: GoogleFonts.roboto(color: active)),
-                          TextSpan(
-                              text: " you are ",
-                              style: GoogleFonts.roboto(color: textColor)),
-                          TextSpan(
-                              text: "not what",
-                              style: GoogleFonts.roboto(color: active)),
-                          TextSpan(
-                              text: " you look like.",
-                              style: GoogleFonts.roboto(color: textColor)),
-                        ],
-                            style: GoogleFonts.roboto(
-                                fontSize:
-                                    ResponsiveWidget.isMediumScreen(context)
-                                        ? 38
-                                        : 58,
-                                fontWeight: FontWeight.bold))),
-                    Visibility(
-                      child: Text(
-                        mainParagraph,
-                        style: GoogleFonts.roboto(
-                            fontSize: 20, letterSpacing: 1.5, height: 1.5),
-                      ),
-                    ),
+                    Text(tagline, style: h1),
+                    Text(mainParagraph, style: h2),
                     SizedBox(
                       height: 20,
                     ),
