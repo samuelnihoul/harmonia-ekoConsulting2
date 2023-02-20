@@ -1,5 +1,5 @@
 const mainParagraph =
-    "We are here to help you reap the benefits of aligning your businisses with emerging ecological incentives";
+    "We are here to help you reap the benefits of aligning your business with emerging ecological incentives";
 const tagline = "Realigning Money and Ecology";
 
 class Testimonial {

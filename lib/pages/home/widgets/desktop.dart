@@ -72,17 +72,18 @@ class DesktopScreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          
                           BottomText(
-                            mainText: "15k+",
-                            secondaryText: "Dates and matches\nmade everyday",
+                            mainText: "20+",
+                            secondaryText: "Well-Rounded Services",
                           ),
                           BottomText(
-                            mainText: "1,456",
-                            secondaryText: "New members\nsignup every day",
+                            mainText: "1000+",
+                            secondaryText: "T CO2eq avoided",
                           ),
                           BottomText(
-                            mainText: "1M+",
-                            secondaryText: "Members from\naround the world",
+                            mainText: "10+",
+                            secondaryText: "Happy Clients",
                           ),
                         ],
                       ),

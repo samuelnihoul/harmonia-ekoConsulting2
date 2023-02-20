@@ -10,7 +10,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  final List _isHovering = [false, false, false, false];
+  final List _isHovering = [false, false, false, false,false];
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +48,8 @@ class _NavBarState extends State<NavBar> {
                             onHover: (value) {
                               setState(() {
                                 value
-                                    ? _isHovering[0] = true
-                                    : _isHovering[0] = false;
+                                    ? _isHovering[itemList.indexOf(item)] = true
+                                    : _isHovering[itemList.indexOf(item)] = false;
                               });
                             },
                             hoverColor: Colors.transparent,
@@ -67,7 +67,7 @@ class _NavBarState extends State<NavBar> {
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
-                                    color: _isHovering[0] ? active : active,
+                                    color: _isHovering[itemList.indexOf(item)] ? disable : active,
                                   ),
                                 ),
                                 SizedBox(height: 5),
@@ -75,7 +75,7 @@ class _NavBarState extends State<NavBar> {
                                   maintainAnimation: true,
                                   maintainState: true,
                                   maintainSize: true,
-                                  visible: _isHovering[0],
+                                  visible: _isHovering[itemList.indexOf(item)],
                                   child: Container(
                                     decoration: BoxDecoration(
                                         color: disable,
