@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/helpers/style.dart';
 import 'package:flutter_web_example/widgets/button.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import '../constants/navbarItem.dart';
+
 class NavBar extends StatefulWidget {
   @override
   _NavBarState createState() => _NavBarState();
 }
 
 class _NavBarState extends State<NavBar> {
-  final List _isHovering = [
-    false,
-    false,
-  ];
+  final List _isHovering = [false, false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -42,51 +40,56 @@ class _NavBarState extends State<NavBar> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-for (item in itemList)
-                    SizedBox(width: _width / 8),
-                    InkWell(
-                      onHover: (value) {
-                        setState(() {
-                          value
-                              ? _isHovering[0] = true
-                              : _isHovering[0] = false;
-                        });
-                      },
-                      hoverColor: Colors.transparent,
-                      onTap: () {
-                        Navigator.pushNamed(context, item.route);
-                      },
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
+                    for (final item in itemList)
+                      Row(
                         children: [
-                          SizedBox(
-                            height: 12,
-                          ),
-                          Text(
-                            item.name,
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: _isHovering[0] ? active : active,
+                          SizedBox(width: _width / 8),
+                          InkWell(
+                            onHover: (value) {
+                              setState(() {
+                                value
+                                    ? _isHovering[0] = true
+                                    : _isHovering[0] = false;
+                              });
+                            },
+                            hoverColor: Colors.transparent,
+                            onTap: () {
+                              Navigator.pushNamed(context, item.route);
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  item.name,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: _isHovering[0] ? active : active,
+                                  ),
+                                ),
+                                SizedBox(height: 5),
+                                Visibility(
+                                  maintainAnimation: true,
+                                  maintainState: true,
+                                  maintainSize: true,
+                                  visible: _isHovering[0],
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: disable,
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    height: 7,
+                                    width: 7,
+                                  ),
+                                )
+                              ],
                             ),
                           ),
-                          SizedBox(height: 5),
-                          Visibility(
-                            maintainAnimation: true,
-                            maintainState: true,
-                            maintainSize: true,
-                            visible: _isHovering[0],
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: disable,
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 7,
-                              width: 7,
-                            ),
-                          )
                         ],
                       ),
-                    ),
                     SizedBox(width: _width / 20),
                   ],
                 ),

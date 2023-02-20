@@ -93,7 +93,7 @@ class DesktopScreen extends StatelessWidget {
             ),
           ),
         ),
-        Image.asset("images/home.jpg", fit: BoxFit.fitHeight),
+        Image.asset("images/mascott.png", fit: BoxFit.fitHeight),
       ]),
     );
   }
