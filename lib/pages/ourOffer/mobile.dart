@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/constants/content.dart';
 import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/widgets/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MobileOurClientsScreen extends StatelessWidget {
+class MobileServicesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -87,10 +86,6 @@ class MobileOurClientsScreen extends StatelessWidget {
                       border: InputBorder.none),
                 ),
               ),
-              CustomButton(
-                text: "Get started",
-                onPressed: () {},
-              )
             ],
           ),
         ),

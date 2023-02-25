@@ -8,7 +8,6 @@ class DesktopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    final _emailController = TextEditingController();
     return Container(
       decoration: BoxDecoration(color: Color(0xffff100d08)),
       height: MediaQuery.of(context).size.height,
@@ -32,37 +31,9 @@ class DesktopScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Container(
-                      padding: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(40),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(.1),
-                                offset: Offset(0, 40),
-                                blurRadius: 80)
-                          ]),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: screenSize.width / 4,
-                            padding: EdgeInsets.only(left: 8),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  icon: Icon(Icons.email_outlined),
-                                  hintText: "Entrez votre email",
-                                  border: InputBorder.none),
-                            ),
-                          ),
-                          EmailSendButton(
-                            text:_emailController.text,
-                            
-                          )
-                        ],
-                      ),
-                    ),
+                    ElevatedButton(
+                    onPressed:(){Navigator.pushNamed(context,'/ourServices');},
+child:Row(mainAxisAlignment:MainAxisAlignment.end,children:[Text('Découvrir'),Icon(Icons.arrow_right)]),),
                     SizedBox(height: screenSize.height / 14),
                     Visibility(
                       visible: screenSize.height > 700,
@@ -71,15 +42,15 @@ class DesktopScreen extends StatelessWidget {
                         children: [
                           BottomText(
                             mainText: "20+",
-                            secondaryText: "Well-Rounded Services",
+                            secondaryText: "Services",
                           ),
                           BottomText(
                             mainText: "1000+",
-                            secondaryText: "T CO2eq avoided",
+                            secondaryText: "T CO2eq évitées",
                           ),
                           BottomText(
                             mainText: "10+",
-                            secondaryText: "Happy Clients",
+                            secondaryText: "Clients satisfaits",
                           ),
                         ],
                       ),

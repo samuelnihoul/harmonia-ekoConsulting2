@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/widgets/button.dart';
 
 import '../constants/navbarItem.dart';
 
@@ -82,12 +81,13 @@ class _NavBarState extends State<NavBar> {
                                   ),
                           ),
                       ]),),
-              CustomButton(
+              ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/ourServices');
                 },
-                text: "Découvrir",
-              ),
+                      child:Text("Découvrir"),
+                      )
+              
                   ],
                 ),
               ),

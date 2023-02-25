@@ -37,3 +37,6 @@ TextStyle defaultStyle = TextStyle(
 TextStyle activeDefaultStyle = TextStyle(
   color: active,
 );
+TextStyle h1m = h2.copyWith(color: active);
+TextStyle h2m = h3.copyWith(color: textColor);
+TextStyle h3m = h3.copyWith(fontSize: 12.0);

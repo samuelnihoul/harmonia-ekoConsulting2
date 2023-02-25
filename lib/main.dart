@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/router.dart';
-
+import './helpers/style.dart';
 final TextStyle caskadia = TextStyle(fontFamily: 'Caskadia');
 void main() {
   runApp(MyApp());
@@ -13,9 +13,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'HE Consulting',
+      
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: TextTheme(bodyText2: caskadia)),
+          textTheme: TextTheme(bodyText2: caskadia,
+button:caskadia
+
+        ),
+        colorScheme:ColorScheme(
+          secondary:disable,
+          onSurface:Colors.white,
+          surface:active,
+          onBackground:Colors.white,
+          background:Colors.black,
+          onError:Colors.white,
+error:disable,
+          onSecondary:Colors.white,
+onPrimary:Colors.white,
+          primary:active,
+          brightness:Brightness.dark
+        )
+      ),
+
       home: HomePage(),
       routes: {
         '/home': (context) => HomePage(),

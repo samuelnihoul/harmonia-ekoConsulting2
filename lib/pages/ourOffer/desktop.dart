@@ -3,11 +3,10 @@ import 'package:flutter_web_example/constants/content.dart';
 import 'package:flutter_web_example/helpers/responsive.dart';
 import 'package:flutter_web_example/helpers/style.dart';
 import 'package:flutter_web_example/widgets/bottom_text_widget.dart';
-import 'package:flutter_web_example/widgets/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DesktopOurClientsScreen extends StatelessWidget {
-  const DesktopOurClientsScreen({super.key});
+class DesktopServicesScreen extends StatelessWidget {
+  const DesktopServicesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -93,10 +92,6 @@ class DesktopOurClientsScreen extends StatelessWidget {
                                 border: InputBorder.none),
                           ),
                         ),
-                        CustomButton(
-                          text: "Get started",
-                          onPressed: () {},
-                        )
                       ],
                     ),
                   ),

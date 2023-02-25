@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/helpers/responsive.dart';
 import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/pages/home/widgets/desktop.dart';
-import 'package:flutter_web_example/pages/home/widgets/mobile.dart';
+import 'package:flutter_web_example/pages/home/desktop.dart';
+import 'package:flutter_web_example/pages/home/mobile.dart';
 import 'package:flutter_web_example/widgets/drawer.dart';
 import 'package:flutter_web_example/widgets/mobile_navbar.dart';
 import 'package:flutter_web_example/widgets/navbar_desktop.dart';
 
-import 'pages/about.dart/widgets/desktop.dart';
-import 'pages/about.dart/widgets/mobile.dart';
-import 'pages/contact/widgets/desktop.dart';
-import 'pages/contact/widgets/mobile.dart';
-import 'pages/nosClients/widgets/desktop.dart';
-import 'pages/nosClients/widgets/mobile.dart';
-import 'pages/ourOffer.dart/widgets/desktop.dart';
-import 'pages/ourOffer.dart/widgets/mobile.dart';
+import 'pages/about/desktop.dart';
+import 'pages/about/mobile.dart';
+import 'pages/contact/desktop.dart';
+import 'pages/contact/mobile.dart';
+import 'pages/ourOffer/desktop.dart';
+import 'pages/ourOffer/mobile.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -31,8 +29,6 @@ class _HomePageState extends State<HomePage> {
       switch (ModalRoute.of(context)?.settings.name) {
         case '/about':
           return DesktopAboutScreen();
-        case '/nosClients':
-          return DesktopOurClientsScreen();
         case '/ourOffer':
           return DesktopServicesScreen();
         case '/contact':
@@ -47,8 +43,6 @@ class _HomePageState extends State<HomePage> {
         case '/about':
           return MobileAboutScreen();
         case '/ourClients':
-          return MobileOurClientsScreen();
-        case '/ourServices':
           return MobileServicesScreen();
         case '/contact':
           return MobileContactScreen();
