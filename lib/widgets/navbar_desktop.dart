@@ -10,8 +10,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  final List _isHovering = [false, false, false, false,false];
-
+  final List _isHovering =List.filled(itemList.length,false); 
   @override
   Widget build(BuildContext context) {
     var _width = MediaQuery.of(context).size.width;
@@ -38,12 +37,9 @@ class _NavBarState extends State<NavBar> {
               Text('HE CONSULTING', style: navbarTitle),
               Expanded(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     for (final item in itemList)
-                      Row(
-                        children: [
-                          SizedBox(width: _width / 8),
                           InkWell(
                             onHover: (value) {
                               setState(() {
@@ -84,23 +80,17 @@ class _NavBarState extends State<NavBar> {
                                     height: 7,
                                     width: 7,
                                   ),
-                                )
-                              ],
-                            ),
                           ),
-                        ],
-                      ),
-                    SizedBox(width: _width / 20),
-                  ],
-                ),
-              ),
+                      ]),),
               CustomButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/ourServices');
                 },
                 text: "Découvrir",
               ),
-              SizedBox(width: _width / 40),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

@@ -17,7 +17,7 @@ class MobileMenu extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              for (final item in itemList) NavbarItem(item),
+              for (final item in itemMobileList) NavbarItem(item),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Text(

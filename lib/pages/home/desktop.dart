@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_example/constants/content.dart';
 import 'package:flutter_web_example/helpers/style.dart';
 import 'package:flutter_web_example/widgets/bottom_text_widget.dart';
-import 'package:flutter_web_example/widgets/button.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class DesktopScreen extends StatelessWidget {
   const DesktopScreen({super.key});
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+    final _emailController = TextEditingController();
     return Container(
       decoration: BoxDecoration(color: Color(0xffff100d08)),
       height: MediaQuery.of(context).size.height,
@@ -26,10 +25,10 @@ class DesktopScreen extends StatelessWidget {
                     Container(
                       alignment: Alignment.centerLeft,
                       margin: EdgeInsets.only(bottom: 15),
-                      child: Text(heroText, style: h3),
+                      child: Text(heroTextFR, style: h3),
                     ),
-                    Text(tagline, style: h1),
-                    Text(mainParagraph, style: h2),
+                    Text(taglineFR, style: h1),
+                    Text(mainParagraphFR, style: h2),
                     SizedBox(
                       height: 20,
                     ),
@@ -57,11 +56,9 @@ class DesktopScreen extends StatelessWidget {
                                   border: InputBorder.none),
                             ),
                           ),
-                          CustomButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'ourServices');
-                            },
-                            text: "Découvrir",
+                          EmailSendButton(
+                            text:_emailController.text,
+                            
                           )
                         ],
                       ),
@@ -72,7 +69,6 @@ class DesktopScreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          
                           BottomText(
                             mainText: "20+",
                             secondaryText: "Well-Rounded Services",

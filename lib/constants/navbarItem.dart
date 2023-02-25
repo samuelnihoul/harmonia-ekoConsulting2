@@ -6,8 +6,10 @@ class INavbarItem {
 
 INavbarItem about = INavbarItem(name: 'À propos', route: '/about');
 INavbarItem ourServices =
-    INavbarItem(name: 'Nos Services', route: '/ourServices');
+INavbarItem(name: 'Nos Services', route: '/ourServices');
 INavbarItem contact = INavbarItem(name: 'Contact', route: '/contact');
-INavbarItem ourClients = INavbarItem(name: 'Nos Clients', route: '/ourClients');
 INavbarItem home = INavbarItem(name: 'Accueil', route: '/');
-final itemList = [home, ourServices, ourClients, about, contact];
+final itemMobileList = [home, ourServices, about, contact];
+final itemList = [ ourServices, about, contact];
+
+
