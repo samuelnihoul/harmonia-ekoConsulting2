@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/constants/content.dart';
-import 'package:flutter_web_example/helpers/style.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MobileServicesScreen extends StatelessWidget {
   @override
@@ -19,43 +16,11 @@ class MobileServicesScreen extends StatelessWidget {
               width: 450,
               constraints: BoxConstraints(maxWidth: 450),
               margin: EdgeInsets.symmetric(horizontal: 20),
-              child: RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "Get noticed for ",
-                      ),
-                      TextSpan(
-                          text: "who",
-                          style: GoogleFonts.roboto(color: active)),
-                      TextSpan(
-                        text: " you are, ",
-                      ),
-                      TextSpan(
-                          text: "not what",
-                          style: GoogleFonts.roboto(color: active)),
-                      TextSpan(
-                        text: " you look like.",
-                      ),
-                    ],
-                    style: GoogleFonts.roboto(
-                        fontSize: 28, fontWeight: FontWeight.bold)),
-              ),
             ),
           ],
         ),
         SizedBox(
           height: 20,
-        ),
-        Container(
-          width: 550,
-          constraints: BoxConstraints(maxWidth: 550),
-          child: Text(
-            mainParagraph,
-            textAlign: TextAlign.center,
-            style: GoogleFonts.roboto(letterSpacing: 1.5, height: 1.5),
-          ),
         ),
         SizedBox(
           height: 20,

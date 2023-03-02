@@ -12,10 +12,10 @@ class BottomText extends StatelessWidget {
     return RichText(
         text: TextSpan(
             children: [
-          TextSpan(text: "$mainText \n"),
+          TextSpan(text: "$mainText \n",style:h2),
           TextSpan(
               text: secondaryText,
-  style:h3.copyWith(color:Colors.white))
+  style:h3)
         ],
             style:h1 
                ));

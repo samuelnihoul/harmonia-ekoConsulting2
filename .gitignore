@@ -43,3 +43,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+#Environment variables
+/lib/.env
+/assets/hypnotic-trees-328016-b2df73db7495.json
+       m

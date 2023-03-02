@@ -9,33 +9,45 @@ TextStyle h1 = TextStyle(
   fontSize: 72.0,
   fontWeight: FontWeight.bold,
   color: active,
+  fontFamily:'Caskadia'
 );
 TextStyle h2 =
-    TextStyle(fontWeight: FontWeight.bold, fontSize: 36.0, color: textColor);
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 36.0, color: textColor,
+  fontFamily:'Caskadia'
+);
 TextStyle p = TextStyle(
   fontSize: 14.0,
+  fontFamily:'Caskadia'
 );
-TextStyle h3 = h2.copyWith(fontSize: 24.0, color: disable);
+TextStyle h3 = h2.copyWith(fontSize: 24.0, color: disable,
+  fontFamily:'Caskadia'
+);
 TextStyle pInverse = p.copyWith(
   color: bgColor,
+  fontFamily:'Caskadia'
 );
 TextStyle h2Inverse = h2.copyWith(
   color: bgColor,
+  fontFamily:'Caskadia'
 );
 TextStyle navbarTitle = TextStyle(
   fontSize: 16.0,
   fontWeight: FontWeight.bold,
   color: Colors.white,
+  fontFamily:'Caskadia'
 );
 TextStyle navbarItem = TextStyle(
   fontSize: 14.0,
   color: Colors.white,
+  fontFamily:'Caskadia'
 );
 TextStyle defaultStyle = TextStyle(
   color: textColor,
+  fontFamily:'Caskadia'
 );
 TextStyle activeDefaultStyle = TextStyle(
   color: active,
+  fontFamily:'Caskadia'
 );
 TextStyle h1m = h2.copyWith(color: active);
 TextStyle h2m = h3.copyWith(color: textColor);

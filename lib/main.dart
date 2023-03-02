@@ -16,10 +16,7 @@ class MyApp extends StatelessWidget {
       
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: TextTheme(bodyText2: caskadia,
-button:caskadia
-
-        ),
+          
         colorScheme:ColorScheme(
           secondary:disable,
           onSurface:Colors.white,
