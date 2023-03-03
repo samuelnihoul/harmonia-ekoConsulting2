@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_example/router.dart';
 import './helpers/style.dart';
+import 'package:firebase_core/firebase_core.dart';
+import './firebase_options.dart';
 final TextStyle caskadia = TextStyle(fontFamily: 'Caskadia');
-void main() {
+void main() async{
+await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(MyApp());
 }
 
@@ -37,8 +42,7 @@ onPrimary:Colors.white,
         '/home': (context) => HomePage(),
         '/about': (context) => HomePage(),
         '/contact': (context) => HomePage(),
-        '/ourClients': (context) => HomePage(),
-        '/ourServices': (context) => HomePage(),
+        '/services': (context) => HomePage(),
       },
     );
   }

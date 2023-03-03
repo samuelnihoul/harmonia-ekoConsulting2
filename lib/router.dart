@@ -12,7 +12,6 @@ import 'pages/about/mobile.dart';
 import 'pages/contact/desktop.dart';
 import 'pages/contact/mobile.dart';
 import 'pages/ourOffer/desktop.dart';
-import 'pages/ourOffer/mobile.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,7 +28,7 @@ class _HomePageState extends State<HomePage> {
       switch (ModalRoute.of(context)?.settings.name) {
         case '/about':
           return DesktopAboutScreen();
-        case '/ourOffer':
+        case '/services':
           return DesktopServicesScreen();
         case '/contact':
           return DesktopContactScreen();
@@ -42,8 +41,8 @@ class _HomePageState extends State<HomePage> {
       switch (ModalRoute.of(context)?.settings.name) {
         case '/about':
           return MobileAboutScreen();
-        case '/ourClients':
-          return MobileServicesScreen();
+        case '/services':
+          return DesktopServicesScreen();
         case '/contact':
           return MobileContactScreen();
         default:

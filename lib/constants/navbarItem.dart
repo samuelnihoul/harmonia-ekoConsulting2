@@ -6,7 +6,7 @@ class INavbarItem {
 
 INavbarItem about = INavbarItem(name: 'À propos', route: '/about');
 INavbarItem ourServices =
-INavbarItem(name: 'Nos Services', route: '/ourServices');
+INavbarItem(name: 'Services', route: '/services');
 INavbarItem contact = INavbarItem(name: 'Contact', route: '/contact');
 INavbarItem home = INavbarItem(name: 'Accueil', route: '/');
 final itemMobileList = [home, ourServices, about, contact];
