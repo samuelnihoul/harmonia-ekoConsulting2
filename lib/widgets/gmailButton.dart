@@ -14,9 +14,13 @@ Future<auth.AuthClient> obtainAuthenticatedClient(BuildContext context) async {
       "client_email":jsonData["client_email"],
       "client_id":jsonData["client_id"],
       "type":jsonData["type"]
-    });
-  var scopes = ['https://mail.google.com'];
-
+    },impersonatedUser:'samuelnihoul@gmail.com');
+  var scopes = [
+      'https://www.googleapis.com/auth/gmail.send',"https://mail.google.com/",
+"https://www.googleapis.com/auth/gmail.modify",
+"https://www.googleapis.com/auth/gmail.compose",
+"https://www.googleapis.com/auth/gmail.send"
+];
   auth.AuthClient client = await auth.clientViaServiceAccount(accountCredentials, scopes);
 
   return client; // Remember to close the client when you are finished with it.
