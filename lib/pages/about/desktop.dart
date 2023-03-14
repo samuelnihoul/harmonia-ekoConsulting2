@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/style.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
+import 'package:HEConsulting/helpers/style.dart';
+import '../../widgets/teamMember.dart';
 import '../../../constants/team.dart';
 
 class DesktopAboutScreen extends StatelessWidget {
@@ -44,9 +43,9 @@ class DesktopAboutScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        TeamMember(zakaria),
-                        TeamMember(nouhaila),
+                        // TeamMember(zakaria),
                         TeamMember(samuel),
+                        TeamMember(nouhaila),
                       ],
                     ),
                   )
@@ -86,64 +85,6 @@ class DesktopAboutScreen extends StatelessWidget {
   }
 }
 
-class TeamMember extends StatelessWidget {
-  final ITeamMember teamMember;
-  const TeamMember(
-    this.teamMember, {
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    var _width = MediaQuery.of(context).size.width;
-    var _height = MediaQuery.of(context).size.height;
-    return Container(
-      constraints:
-          BoxConstraints(maxWidth: _width * 0.2, maxHeight: _width * 0.2),
-      child: AspectRatio(
-        aspectRatio: 9 / 10,
-        child: Card(
-          color: Color(0xfff9c22e),
-          elevation: 40,
-          shadowColor: Colors.black,
-          child: Padding(
-            padding: EdgeInsets.only(top: _height * 0.02),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image(
-                    image:
-                        Image.asset('assets/images/${teamMember.photo}').image,
-                    width: MediaQuery.of(context).size.width * 0.16,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Wrap(
-                  alignment: WrapAlignment.center,
-                  spacing: _height * 0.01,
-                  children: [
-                    Icon(MdiIcons.facebook, color: Colors.white),
-                    Icon(
-                      MdiIcons.twitter,
-                      color: Colors.white,
-                    ),
-                    Icon(
-                      MdiIcons.linkedin,
-                      color: Colors.white,
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class GroupOf9Dots extends StatelessWidget {
   const GroupOf9Dots({super.key});

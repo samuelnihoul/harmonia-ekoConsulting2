@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/constants/content.dart';
-import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/widgets/bottom_text_widget.dart';
+import '../../constants/content.dart';
+import '../../helpers/style.dart';
+import '../../widgets/bottom_text_widget.dart';
 
 class MobileScreen extends StatefulWidget {
   const MobileScreen({Key? key}) : super(key: key);
@@ -53,7 +53,7 @@ class _MobileScreenState extends State<MobileScreen> {
           children: [
             // Only show the image if _showImage is true
             if (_showImage)
-              Image.asset("images/mascott.png", fit: BoxFit.fitHeight),
+              Image.asset("assets/images/mascott.png", fit: BoxFit.fitHeight),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Column(

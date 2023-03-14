@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/style.dart';
+import '../helpers/style.dart';
 
 import '../constants/navbarItem.dart';
 

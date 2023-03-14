@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
-Color active = Color(0xFFf9c22e);
-Color disable = Color(0xFFdb1a4d);
-Color bgColor = Color(0xFF1a1a1a);
-Color textColor = Color(0xFFffffff);
-Color lightActive = Color(0xfffbd46d);
+const Color active = Color(0xFFf9c22e);
+const Color disable = Color(0xFf62b6b5);
+const Color bgColor = Color(0xFF1a1a1a);
+const Color textColor = Color(0xFffffffff);
+const Color lightActive = Color(0xfffbd46d);
 TextStyle h1 = TextStyle(
   fontSize: 72.0,
   fontWeight: FontWeight.bold,

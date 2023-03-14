@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/style.dart';
+import 'package:HEConsulting/helpers/style.dart';
 
 import '../constants/navbarItem.dart';
 
@@ -23,6 +23,12 @@ class _NavBarState extends State<NavBar> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              InkWell(
+                onTap:(){
+                  Navigator.pushNamed(context,'/')
+ ;               },
+                child:Row(children:[
+
               SizedBox(
                 width: 20,
               ),
@@ -34,6 +40,7 @@ class _NavBarState extends State<NavBar> {
                 width: _width / 100,
               ),
               Text('HE CONSULTING', style: navbarTitle),
+            ])),
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/constants/content.dart';
-import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/widgets/bottom_text_widget.dart';
+import '../../constants/content.dart';
+import '../../helpers/style.dart';
+import '../../widgets/bottom_text_widget.dart';
 
 class DesktopScreen extends StatelessWidget {
   const DesktopScreen({super.key});
@@ -61,7 +61,7 @@ child:Row(mainAxisAlignment:MainAxisAlignment.end,children:[Text('Découvrir'),I
             ),
           ),
         ),
-        Image.asset("images/mascott.png", fit: BoxFit.fitHeight),
+        Image.asset("assets/images/mascott.png", fit: BoxFit.fitHeight),
       ]),
     );
   }

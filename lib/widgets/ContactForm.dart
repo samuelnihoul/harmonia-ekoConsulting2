@@ -47,7 +47,7 @@ class _ContactFormState extends State<ContactForm> {
             controller: nameController,
             validator: (value) {
               if (value==null) {
-                return 'Please enter your name';
+                return 'Entrez votre nom.';
               }
               return null;
             },
@@ -59,11 +59,11 @@ class _ContactFormState extends State<ContactForm> {
             controller: emailController,
             validator: (value) {
               if (value == null) {
-                return 'Please enter your email';
+                return 'Entrez votre email.';
               }
               if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
                   .hasMatch(value)) {
-                return 'Please enter a valid email';
+                return 'Email non valide.';
               }
               return null;
             },
@@ -75,7 +75,7 @@ class _ContactFormState extends State<ContactForm> {
             controller: messageController,
             validator: (value) {
               if (value==null) {
-                return 'Please enter your message';
+                return 'Entrez votre message.';
               }
               return null;
             },
@@ -87,7 +87,7 @@ class _ContactFormState extends State<ContactForm> {
           SizedBox(height: 16),
           ElevatedButton(
             onPressed: _submitForm,
-            child: Text('Submit'),
+            child: Text('Envoyer'),
           ),
         ],
       ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/style.dart';
+import '../helpers/style.dart';
 
 Widget mobileTopBar(GlobalKey<ScaffoldState> key) => AppBar(
-      leading: IconButton(
-        icon: Icon(
-          Icons.menu,
+      leading:  IconButton(
+        icon: const Icon(
+           Icons.menu,
           color: active,
         ),
         onPressed: () {

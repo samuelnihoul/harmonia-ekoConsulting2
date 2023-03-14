@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/router.dart';
+import './router.dart';
 import './helpers/style.dart';
 import 'package:firebase_core/firebase_core.dart';
 import './firebase_options.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          
+fontFamily:'Caskadia',          
         colorScheme:ColorScheme(
           secondary:disable,
           onSurface:Colors.white,
@@ -39,7 +39,6 @@ onPrimary:Colors.white,
 
       home: HomePage(),
       routes: {
-        '/home': (context) => HomePage(),
         '/about': (context) => HomePage(),
         '/contact': (context) => HomePage(),
         '/services': (context) => HomePage(),

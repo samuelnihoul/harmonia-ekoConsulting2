@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/responsive.dart';
-import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/pages/home/desktop.dart';
-import 'package:flutter_web_example/pages/home/mobile.dart';
-import 'package:flutter_web_example/widgets/drawer.dart';
-import 'package:flutter_web_example/widgets/mobile_navbar.dart';
-import 'package:flutter_web_example/widgets/navbar_desktop.dart';
+import 'package:HEConsulting/helpers/responsive.dart';
+import 'package:HEConsulting/helpers/style.dart';
+import 'package:HEConsulting/pages/home/desktop.dart';
+import 'package:HEConsulting/pages/home/mobile.dart';
+import 'package:HEConsulting/widgets/drawer.dart';
+import 'package:HEConsulting/widgets/mobile_navbar.dart';
+import 'package:HEConsulting/widgets/navbar_desktop.dart';
 
 import 'pages/about/desktop.dart';
 import 'pages/about/mobile.dart';
