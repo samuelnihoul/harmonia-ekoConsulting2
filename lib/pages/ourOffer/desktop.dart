@@ -5,7 +5,7 @@ class DesktopServicesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _w=MediaQuery.of(context).size.width;
-    return (Padding(padding:EdgeInsets.all(_w*0.1),
+    return (Padding(padding:EdgeInsets.only(top:_w*0.1,left:_w*0.05),
       child:ListView(
 
       children:[
