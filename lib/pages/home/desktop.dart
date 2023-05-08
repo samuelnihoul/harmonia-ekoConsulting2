@@ -9,7 +9,13 @@ class DesktopScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      decoration: BoxDecoration(color: Color(0xffff100d08)),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xFF676FA0), Colors.white],
+        ),
+      ),
       height: MediaQuery.of(context).size.height,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Expanded(
@@ -32,8 +38,16 @@ class DesktopScreen extends StatelessWidget {
                       height: 20,
                     ),
                     ElevatedButton(
-                    onPressed:(){Navigator.pushNamed(context,'/ourServices');},
-child:Row(mainAxisAlignment:MainAxisAlignment.end,children:[Text('Découvrir'),Icon(Icons.arrow_right)]),),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/ourServices');
+                      },
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text('Découvrir'),
+                            Icon(Icons.arrow_right)
+                          ]),
+                    ),
                     SizedBox(height: screenSize.height / 14),
                     Visibility(
                       visible: screenSize.height > 700,
