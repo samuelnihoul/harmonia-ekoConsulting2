@@ -13,7 +13,7 @@ class DesktopScreen extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFF676FA0), Colors.white],
+          colors: [Colors.black, Colors.grey],
         ),
       ),
       height: MediaQuery.of(context).size.height,

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'HE Consulting',
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: GoogleFonts.montserratTextTheme(),
+          textTheme: GoogleFonts.comfortaaTextTheme(),
           colorScheme: ColorScheme(
               secondary: disable,
               onSurface: Colors.white,
